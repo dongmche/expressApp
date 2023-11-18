@@ -20,7 +20,7 @@ const Helmet = require('helmet');
 const path = require('path');
 const campground = require('./models/campground');
 
-const { DB_URL } = require("./statics.js");
+// const { DB_URL } = require("./statics.js");
 
 
 const dbUrl = process.env.DB_URL;
