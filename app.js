@@ -1,7 +1,7 @@
-if (process.env.NODE_ENV !== 'production') {
-    require('dotenv').config();
-}
-// require('dotenv').config();
+// if (process.env.NODE_ENV !== 'production') {
+//     require('dotenv').config();
+// }
+require('dotenv').config();
 
 
 
@@ -20,11 +20,12 @@ const Helmet = require('helmet');
 const path = require('path');
 const campground = require('./models/campground');
 
+const { DB_URL } = require("./statics.js");
 
 
-const dbUrl = "mongodb+srv://arqvat:a2a3b2b3@cluster0.oqrslqe.mongodb.net/?retryWrites=true&w=majority";
-// const dbUrl = process.env.DB_URL;
+const dbUrl = process.env.DB_URL;
 // const dbUrl = 'mongodb://127.0.0.1:27017/expressApp';
+// const dbUrl = DB_URL;
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
     useUnifiedTopology: true
