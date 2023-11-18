@@ -22,7 +22,8 @@ const campground = require('./models/campground');
 
 
 
-const dbUrl = process.env.DB_URL;
+const dbUrl = "mongodb+srv://arqvat:a2a3b2b3@cluster0.oqrslqe.mongodb.net/?retryWrites=true&w=majority";
+// const dbUrl = process.env.DB_URL;
 // const dbUrl = 'mongodb://127.0.0.1:27017/expressApp';
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
